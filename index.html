@@ -2,16 +2,66 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Web Teknolojileri Projesi</title>
+  <title>Ana Sayfa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Özel CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <h1>Web Teknolojileri Projesi</h1>
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Web Projem</a>
 
-  <p>
-    Bu site Web Teknolojileri dersi kapsamında 
-    proje ödevi olarak hazırlanmıştır.
-  </p>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Ana Sayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="hakkimda.html">Hakkımda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cv.html">CV</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sehir.html">Şehrim</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="miras.html">Mirasımız</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ilgi.html">İlgi Alanlarım</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="iletisim.html">İletişim</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-light ms-2" href="login.html">Login</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <div class="container mt-5 text-center">
+    <h1>Web Teknolojileri Projesi</h1>
+    <p class="lead">
+      Bu site Web Teknolojileri dersi kapsamında hazırlanmıştır.
+    </p>
+  </div>
+
  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
 </body>
 </html>
