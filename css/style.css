@@ -28,7 +28,7 @@ hr {
 
 .about-text {
   font-size: 1.05rem;
-  line-height: 1;
+  line-height: 1.6;
 }
 
 
@@ -40,12 +40,6 @@ hr {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-
-.section-title {
-  margin-top: 25px;
-  font-weight: 500;
-  color: #9c090c;
-}
 
 .hobby-card {
   background-color: #fcd2e5;
@@ -80,7 +74,7 @@ footer p {
 
 .home-text {
   font-size: 1.5rem;
-  line: height 2.04em;
+  line-height: 2.04em;
 }
 
 .home-hero {
@@ -132,4 +126,44 @@ section {
 
 .skill-list li {
   margin-bottom: 5px;
+}
+.carousel-inner img {
+  height: 420px;
+  object-fit: cover;
+}
+
+
+.section-title {
+  margin-top: 25px;
+  font-weight: 500;
+  color: #9c090c;
+}
+
+
+.sehir-title {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.sehir-text p {
+  line-height: 1.7;
+}
+
+.title-wrap {
+  display: inline-block; 
+}
+
+.short-hr {
+  width: 100%;           
+  height: 4px;
+  background-color: #920202;
+  border: none;
+  margin: 10px 0 25px 0;
+}
+
+.carousel {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
