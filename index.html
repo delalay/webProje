@@ -7,51 +7,86 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Web Projem</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Web Projem</a>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbarMenu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
-          <li class="nav-item"><a class="nav-link" href="hakkimda.html">Hakkımda</a></li>
-          <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
-          <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
-          <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
-          <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
-          <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-outline-light ms-2" href="login.html">Login</a>
-          </li>
-        </ul>
-      </div>
+    <div class="collapse navbar-collapse" id="navbarMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Ana Sayfa</a></li>
+        <li class="nav-item"><a class="nav-link" href="hakkimda.html">Hakkımda</a></li>
+        <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+        <li class="nav-item"><a class="nav-link" href="sehir.html">Şehrim</a></li>
+        <li class="nav-item"><a class="nav-link" href="miras.html">Mirasımız</a></li>
+        <li class="nav-item"><a class="nav-link" href="ilgi.html">İlgi Alanlarım</a></li>
+        <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+        <li class="nav-item">
+          <a class="nav-link btn btn-outline-light ms-2" href="login.html">Login</a>
+        </li>
+      </ul>
     </div>
-  </nav>
-
- 
-  <div class="container mt-5 text-center home-hero">
-    <h1 class="page-title">Web Teknolojileri Projesi</h1>
-    <p class="lead home-text">
-      Merhaba, sayfama hoş geldiniz. Bu sayfada hakkımdaki bilgiler,
-      ilgi alanlarım, bana nasıl ulaşabileceğiniz bilgileri yer almakta.
-      Bu sayfa web projesi kapsamında hazırlanmıştır.
+  </div>
+</nav>
+<div class="home-hero">
+  <div class="home-overlay">
+    <h1 class="home-title">Web Teknolojileri Projesi</h1>
+    <p class="home-subtitle">
+      Kişisel bilgilerimin yer aldığı bu proje web dersi projesi kapsamında hazırlanmıştır.
+      Bu sayfada doğup büyüdüğüm şehir,ilgi alanlarım,bazı profillerim,hakkımdaki genel bilgiler,özgeçmişim 
+      gibi bilgilere ulaşabilirsiniz.
+      <p class="home-subtitle">Lütfen detaylı bilgi için iletişim seçeneklerimden bana ulaşın...</p>
+    
     </p>
   </div>
+</div>
+<div class="container my-5">
+  <div class="row g-4 text-center">
 
-  <footer>
-    <p>&copy; 2026 WebProje | Sakarya Üniversitesi</p>
-  </footer>
+    <div class="col-md-4">
+      <div class="home-info">
+        <h4>Kişisel Bilgiler</h4>
+        <p>
+          Eğitim hayatım, ilgi alanlarım ve kişisel hedeflerim
+          hakkında bilgiler bu sitede yer almaktadır.
+        </p>
+      </div>
+    </div>
 
+    <div class="col-md-4">
+      <div class="home-info">
+        <h4>Şehir Tanıtımı</h4>
+        <p>
+          Yaşadığım şehir olan Diyarbakır’ın tarihi, kültürel
+          ve sosyal yapısı tanıtılmaktadır.
+        </p>
+      </div>
+    </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <div class="col-md-4">
+      <div class="home-info">
+        <h4>Kültürel Miras</h4>
+        <p>
+          Diyarbakır Surları başta olmak üzere kültürel
+          mirasımıza dair detaylı içerikler sunulmaktadır.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 WebProje | Sakarya Üniversitesi</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
