@@ -295,3 +295,26 @@ section {
   padding-left: 14px;
   border-left: 3px solid #9bcafa;
 }
+
+
+/* İletişim Formu */
+.contact-form {
+  background-color: #ffffff;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.contact-form .form-label {
+  font-weight: 600;
+  color: #1f428d;
+}
+
+.contact-form .btn {
+  background-color: #920202;
+  border: none;
+}
+
+.contact-form .btn:hover {
+  background-color: #7a0101;
+}
