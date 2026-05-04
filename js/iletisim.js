@@ -1,4 +1,4 @@
-// Native JavaScript Form Kontrolü
+
 function jsKontrol() {
   const name = document.getElementById("name").value;
   const email = document.getElementById("email").value;

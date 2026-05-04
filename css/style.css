@@ -149,7 +149,7 @@ section {
 }
 
 .miras-hero {
-  background-image: url("/assets/img/surlar.jpg");
+  background-image: url("assets/img/surlar.jpg");
   height: 45vh;
   background-size: cover;
   background-position: center;
@@ -297,7 +297,7 @@ section {
 }
 
 
-/* İletişim Formu */
+
 .contact-form {
   background-color: #ffffff;
   padding: 35px;
@@ -317,4 +317,9 @@ section {
 
 .contact-form .btn:hover {
   background-color: #7a0101;
+}
+
+.navbar .nav-link.active {
+  color: #ffc107 !important; 
+  font-weight: 600;
 }
