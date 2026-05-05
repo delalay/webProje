@@ -11,6 +11,13 @@ body {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
 }
 
+
+@media (max-width: 991px) {
+  .about-card .row {
+    align-items: flex-start;
+  }
+}
+
 hr {
   border: none;              
   height: 4px;
@@ -20,7 +27,7 @@ hr {
 }
 
 .page-title {
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 6px;
    color: #1f428d;
 }
@@ -28,12 +35,18 @@ hr {
 
 .about-text {
   font-size: 1.05rem;
-   margin-top: 8px; 
+  margin-top: 8px; 
   line-height: 1.6;
+  font-weight: 500;
 }
 
 
 .profile-img {
+  position: relative;
+  max-width: 100%;  
+  height: auto;
+  display: block;
+  margin: 0 auto;
   width: 260px;
   height: 350px;
   object-fit: cover;
@@ -43,7 +56,7 @@ hr {
 
 
 .hobby-card {
-  background-color: #fcd2e5;
+  background-color:#82aafb94;
   padding: 18px 22px;
   border-radius: 12px;
   margin-top: 15px;
@@ -67,6 +80,8 @@ footer {
   text-align: center;
   padding: 15px;
   margin-top: 40px;
+  width: 100%;
+  max-width: none;
 }
 
 footer p {
@@ -105,23 +120,28 @@ section {
 
 .skill-list li {
   margin-bottom: 5px;
+  font-weight: 500;
 }
 .carousel-inner img {
   height: 420px;
   object-fit: cover;
 }
 
-
 .section-title {
-  margin-top: 25px;
-  font-weight: 500;
-  color: #9c090c;
+  font-weight: 600;
+  color: #1f428d;
+  border-left: 4px solid #920202;
+  padding-left: 10px;
+  margin-bottom: 1px;
+  margin-top: 40px;
 }
+
 
 
 .sehir-title {
   color: #2c3e50;
   margin-bottom: 10px;
+    margin-top: 1px;
   font-weight: 600;
 }
 
@@ -137,8 +157,10 @@ section {
 .short-hr {
   width: 100%;           
   height: 4px;
-  background-color: #920202;
+  background-color: #670e0e;
   border: none;
+  opacity: 1;
+  
  
 }
 
@@ -149,7 +171,7 @@ section {
 }
 
 .miras-hero {
-  background-image: url("assets/img/surlar.jpg");
+  background-image: url("../assets/img/surlar.jpg");
   height: 45vh;
   background-size: cover;
   background-position: center;
@@ -159,7 +181,7 @@ section {
 .miras-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0, 0, 0, 0.45);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -205,7 +227,7 @@ section {
   font-size: 1.05rem;
 }
 .home-hero {
-  background: linear-gradient(135deg, #920202, #1f428d);
+  background: linear-gradient(135deg, #032081, #549dfd);
   height: 45vh;
   position: relative;
 }
@@ -213,7 +235,7 @@ section {
 .home-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0,0,0,0.45);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -222,6 +244,7 @@ section {
   color: white;
   padding: 20px;
 }
+
 
 .home-title {
   font-size: 2.8rem;
@@ -233,11 +256,12 @@ section {
   max-width: 700px;
 }
 
+
 .home-info {
   background-color: #ffffff;
   padding: 30px;
   border-radius: 16px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
   height: 100%;
 }
 
@@ -245,6 +269,8 @@ section {
   color: #1f428d;
   margin-bottom: 15px;
 }
+
+
 
 .home-info p {
   line-height: 1.6;
@@ -320,6 +346,51 @@ section {
 }
 
 .navbar .nav-link.active {
-  color: #ffc107 !important; 
+  color: #89cff0; 
   font-weight: 600;
+}
+
+main section {
+  margin-top: 35px;
+}
+
+main section:first-of-type {
+  margin-top: 20px;
+}
+
+main section article {
+  padding-left: 10px;
+}
+
+main section article p {
+  font-weight: 500;
+}
+
+.ilgi-card {
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.ilgi-card:hover {
+  transform: translateY(-5px);
+}
+
+.ilgi-card .card-title {
+  font-weight: 600;
+  color: #1f428d;
+  margin-bottom: 10px;
+}
+
+.ilgi-card .card-text {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.ilgi-card .imdb-text {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 10px;
 }

@@ -1,34 +1,70 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  const apiKey = "8d8fbe74"; 
-  const url = `https://www.omdbapi.com/?t=Interstellar&apikey=${apiKey}`;
+  const apiKey = "8d8fbe74";
 
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      console.log("API cevabı:", data);
+  const movies = [
+    {
+      title: "Interstellar",
+      desc: "Interstellar, insanlığın geleceğini kurtarmak amacıyla uzaya gönderilen astronotların zaman ve mekân kavramlarını zorlayan yolculuğunu konu alır."
+    },
+    {
+      title: "The Prestige",
+      desc: "The Prestige, iki sihirbaz arasındaki rekabetin takıntıya dönüşmesini ve bu rekabetin yol açtığı karanlık sonuçları anlatan sürükleyici bir filmdir."
+    },
+    {
+      title: "Prison Break",
+      desc: "Prison Break, masum yere hapse giren kardeşini kurtarmak için kusursuz bir kaçış planı yapan bir mühendisin hikâyesini konu alır."
+    },
+    {
+      title: "Stranger Things",
+      desc: "Stranger Things, küçük bir kasabada yaşanan gizemli olaylar, paralel evrenler ve arkadaşlık bağları etrafında şekillenen bir dizidir."
+    },
+    {
+      title: "The Terminator",
+      desc: "The Terminator, yapay zekânın insanlığa karşı tehdit oluşturduğu bir gelecekte geçen aksiyon ve bilim kurgu türünde kült bir filmdir."
+    },
+    {
+      title: "Police Story",
+      desc: "Police Story, Jackie Chan’in başrolünde olduğu, aksiyon ve komediyi harmanlayan, suçla mücadeleyi konu alan eğlenceli bir yapımdır."
+    }
+  ];
 
-      if (data.Response === "True") {
-        document.getElementById("movieCard").innerHTML = `
-          <img src="${data.Poster}" alt="${data.Title}" class="img-fluid movie-poster mb-4">
-          <h3>${data.Title} (${data.Year})</h3>
-          <p><strong>Yönetmen:</strong> ${data.Director}</p>
-          <p><strong>IMDb Puanı:</strong> ${data.imdbRating}</p>
-          <p class="movie-plot">
-  Interstellar, insanlığın yok olma tehlikesiyle karşı karşıya kaldığı bir gelecekte,
-  yeni yaşam alanları bulmak amacıyla uzaya gönderilen bir grup astronotun hikâyesini anlatır.
-  Film; zaman, uzay, fedakârlık ve insanlık temalarını derin bir bilim kurgu anlatımıyla ele almaktadır.
-</p>
-        `;
-      } else {
-        document.getElementById("movieCard").innerHTML =
-          "<p>Film bulunamadı.</p>";
-      }
-    })
-    .catch(error => {
-      console.error("Hata:", error);
-      document.getElementById("movieCard").innerHTML =
-        "<p>Film bilgileri alınırken hata oluştu.</p>";
-    });
+  const movieArea = document.getElementById("movieCard");
+
+ 
+  movieArea.innerHTML = "<p class='about-text text-center'>Film bilgileri yükleniyor...</p>";
+
+  let firstLoaded = false; 
+
+  movies.forEach(movie => {
+    const url = `https://www.omdbapi.com/?t=${encodeURIComponent(movie.title)}&apikey=${apiKey}`;
+
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        if (data.Response === "True") {
+
+          
+          if (!firstLoaded) {
+            movieArea.innerHTML = "";
+            firstLoaded = true;
+          }
+
+          movieArea.innerHTML += `
+            <div class="col-md-4 mb-4">
+              <div class="card ilgi-card h-100">
+                <img src="${data.Poster}" class="card-img-top" alt="${data.Title}">
+                <div class="card-body">
+                  <h5 class="card-title">${data.Title} (${data.Year})</h5>
+                  <p class="card-text">${movie.desc}</p>
+                  <p class="imdb-text">IMDb: ${data.imdbRating}</p>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+      })
+      .catch(err => console.error(err));
+  });
 
 });
